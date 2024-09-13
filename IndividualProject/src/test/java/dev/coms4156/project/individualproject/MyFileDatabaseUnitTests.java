@@ -59,7 +59,7 @@ public class MyFileDatabaseUnitTests {
   }
 
   public static String FILE_PATH = "./data.txt";
-  public static String DUMMY_FILE_PATH = "dummy.txt";
+  public static String DUMMY_FILE_PATH = "./dummy.txt";
   public static MyFileDatabase myFileDatabase;
   public static MyFileDatabase testFileDatabase;
 }
