@@ -5,12 +5,18 @@ isCourseFull() should return true when the number of enrolled students is equal 
     -> make ">" into "<="
 enrolledStudentCount initialized to 500
     -> initialize to 0
+dropStudent() could drop students even when enrolledStudentCount is 0
+    -> set a check to make sure enrolledStudentCount is positive before dropping student
+enrollStudent() could enroll student even when course is isCourseFull
+    -> check to see if course if full. If yes, then do not enroll student
 [PMD]    75:	MissingOverride:	The method 'toString()' is missing an @Override annotation.
     -> add @Override above function
 
 
 Department.java
 toString method returns the literal string "result.toString()" instead of result.toString()
+    -> remove quotes around return value
+getDepartmentChair() has quotes around return value
     -> remove quotes around return value
 getNumberOfMajors() returns negative of number of majors
     -> remove "-"
@@ -31,12 +37,14 @@ IndividualProjectApplication.java
 [PMD]    84:	LooseCoupling:	Avoid using implementation types like 'HashMap'; use the interface instead
 [PMD]    94:	LooseCoupling:	Avoid using implementation types like 'HashMap'; use the interface instead
 
+
 MyFileDatabase.java
 [PMD]    35:	LooseCoupling:	Avoid using implementation types like 'HashMap'; use the interface instead
 [PMD]    44:	LooseCoupling:	Avoid using implementation types like 'HashMap'; use the interface instead
 [PMD]    54:	ReturnEmptyCollectionRatherThanNull:	Return an empty collection rather than null.
 [PMD]    76:	LooseCoupling:	Avoid using implementation types like 'HashMap'; use the interface instead
 [PMD]    100:	LooseCoupling:	Avoid using implementation types like 'HashMap'; use the interface instead
+
 
 RouteController.java
 retrieveDepartment() HTTP status was flipped

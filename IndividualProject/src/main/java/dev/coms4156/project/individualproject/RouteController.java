@@ -354,14 +354,8 @@ public class RouteController {
         departmentMapping = IndividualProjectApplication.myFileDatabase.getDepartmentMapping();
 
         Department specifiedDept = departmentMapping.get(deptCode);
-        if (specifiedDept.getNumberOfMajors() <= 0) {
-          return new ResponseEntity<>(
-              "Attribute is at minimum",
-              HttpStatus.BAD_REQUEST
-          );
-        }
         specifiedDept.dropPersonFromMajor();
-        return new ResponseEntity<>("Attribute was updated", HttpStatus.OK);
+        return new ResponseEntity<>("Attribute was updated or is at minimum", HttpStatus.OK);
       }
       return new ResponseEntity<>("Department Not Found", HttpStatus.NOT_FOUND);
     } catch (Exception e) {

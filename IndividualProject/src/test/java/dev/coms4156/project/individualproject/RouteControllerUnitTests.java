@@ -109,6 +109,10 @@ public class RouteControllerUnitTests {
 
   @Test
   public void testIsCourseFull() {
+    ResponseEntity<?> response = routeController.isCourseFull("COMS", 3157);
+    assertEquals(HttpStatus.OK, response.getStatusCode());
+    assertTrue(response.getBody().toString().contains("false"));
+
     ResponseEntity<?> response1 = routeController.isCourseFull("COMS", 1);
     assertEquals(HttpStatus.NOT_FOUND, response1.getStatusCode());
     assertEquals("Course Not Found", response1.getBody());
@@ -193,7 +197,7 @@ public class RouteControllerUnitTests {
   public void testRemoveMajorFromDept() {
     ResponseEntity<?> response = routeController.removeMajorFromDept("COMS");
     assertEquals(HttpStatus.OK, response.getStatusCode());
-    assertEquals("Attribute was updated", response.getBody());
+    assertEquals("Attribute was updated or is at minimum", response.getBody());
 
     Department noMajors = new Department(
         "NM", new HashMap<>(),
@@ -202,8 +206,8 @@ public class RouteControllerUnitTests {
     );
     IndividualProjectApplication.myFileDatabase.getDepartmentMapping().put("NO_MAJOR", noMajors);
     ResponseEntity<?> response1 = routeController.removeMajorFromDept("NO_MAJOR");
-    assertEquals(HttpStatus.BAD_REQUEST, response1.getStatusCode());
-    assertEquals("Attribute is at minimum", response1.getBody());
+    assertEquals(HttpStatus.OK, response1.getStatusCode());
+    assertEquals("Attribute was updated or is at minimum", response1.getBody());
 
     ResponseEntity<?> response2 = routeController.removeMajorFromDept("RANDOM");
     assertEquals(HttpStatus.NOT_FOUND, response2.getStatusCode());
