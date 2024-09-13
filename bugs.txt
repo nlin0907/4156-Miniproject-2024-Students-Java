@@ -4,7 +4,7 @@ Courses.java
 getCourseLocation() and getInstructorName() functions are swapped 
     -> swap them
 isCourseFull() should return true when the number of enrolled students is equal to or greater than the capacity
-    -> make ">" into ">="
+    -> make ">" into "<="
 enrolledStudentCount initialized to 500
     -> initialize to 0
 
