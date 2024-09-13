@@ -24,4 +24,4 @@ mvn clean test
 mvn jacoco:report
 open target/site/jacoco/index.html
 ```
-The JaCoCo report has an instruction coverage of 93% and a branch coverage of 94%.
+The JaCoCo report has an instruction coverage of 94% and a branch coverage of 94%.
