@@ -13,7 +13,7 @@ There are no more checkstyle warnings.
 ### Bug Finder
 Bug finder: PMD
 
-Command: inside the IndividualProject directory, do <code> pmd check -d <path to IndividualProject>/src/main/java/dev/coms4156/project/individualproject -R rulesets/java/quickstart.xml -f text </code>
+Command: inside the IndividualProject directory, do <code> pmd check -d src/main/java/dev/coms4156/project/individualproject -R rulesets/java/quickstart.xml -f text </code>
 
 There are no more PMD bugs.
 
