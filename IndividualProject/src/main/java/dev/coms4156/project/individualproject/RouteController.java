@@ -47,8 +47,8 @@ public class RouteController {
         return new ResponseEntity<>("Department Not Found", HttpStatus.NOT_FOUND);
       } else {
         return new ResponseEntity<>(
-          departmentMapping.get(deptCode.toUpperCase(Locale.ROOT)).toString(),
-          HttpStatus.OK
+            departmentMapping.get(deptCode.toUpperCase(Locale.ROOT)).toString(),
+            HttpStatus.OK
         );
       }
 
