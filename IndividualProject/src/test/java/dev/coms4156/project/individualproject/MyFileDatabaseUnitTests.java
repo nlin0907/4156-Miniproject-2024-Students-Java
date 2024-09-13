@@ -8,6 +8,9 @@ import java.util.Map;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+/**
+ * Unit tests for the MyFileDatabase class that also includes setup.
+ */
 public class MyFileDatabaseUnitTests {
 
   @BeforeEach
