@@ -7,6 +7,7 @@ There are no more checkstyle warnings.
 
 ### Bug Finder
 Bug finder: PMD
+
 Command: pmd check -d <path to IndividualProject>/src/main/java/dev/coms4156/project/individualproject -R rulesets/java/quickstart.xml -f text
 
 There are no more PMD bugs.
