@@ -1,18 +1,27 @@
 # 4156 Mini Project README
 
 ### Check Style
-Command: mvn checkstyle:check 
+Command: 
+```
+mvn checkstyle:check 
+target/site/checkstyle.html
+open target/site/checkstyle.html
+```
 
 There are no more checkstyle warnings.
 
 ### Bug Finder
 Bug finder: PMD
 
-Command: pmd check -d <path to IndividualProject>/src/main/java/dev/coms4156/project/individualproject -R rulesets/java/quickstart.xml -f text
+Command: inside the IndividualProject directory, do <code> pmd check -d <path to IndividualProject>/src/main/java/dev/coms4156/project/individualproject -R rulesets/java/quickstart.xml -f text </code>
 
 There are no more PMD bugs.
 
 ### Test Coverage
-Command: mvn clean test jacoco:report 
-
-The JaCoCo report an instruction coverage of 93% and a branch coverage of 83%.
+Command: 
+```
+mvn clean test
+mvn jacoco:report
+open target/site/jacoco/index.html
+```
+The JaCoCo report has an instruction coverage of 93% and a branch coverage of 91%.
