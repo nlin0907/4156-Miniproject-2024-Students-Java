@@ -1,9 +1,9 @@
 # 4156 Mini Project README
 
 ### Check Style
-Command: 
+In the IndividualProject directory, run this command: 
 ```
-mvn checkstyle:check 
+mvn checkstyle:checkstyle 
 target/site/checkstyle.html
 open target/site/checkstyle.html
 ```
@@ -18,7 +18,7 @@ Command: inside the IndividualProject directory, do <code> pmd check -d src/main
 There are no more PMD bugs.
 
 ### Test Coverage
-Command: 
+In the IndividualProject directory, run this command: 
 ```
 mvn clean test
 mvn jacoco:report
